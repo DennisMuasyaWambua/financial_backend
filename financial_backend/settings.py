@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-h!e^b_cqfr9-eo7=g@!tc341_ul=u-flprd8c78a1!3%lft&)#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://financial-backend-5x51.onrender.com/','*']
 
 DATABASE_PASSWORD = config('DATABASE_PASSWORD')
 DATABASE_NAME = config("DATABASE_NAME")
