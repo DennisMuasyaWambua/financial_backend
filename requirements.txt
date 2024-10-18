@@ -8,3 +8,4 @@ prophet
 plotly
 django
 djangorestframework
+python-decouple
