@@ -47,5 +47,5 @@ EXPOSE 8000
 
 # Run the application.
 
-ENTRYPOINT ["python3", "Financial_backend/manage.py"]
+ENTRYPOINT ["python3", "manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]
