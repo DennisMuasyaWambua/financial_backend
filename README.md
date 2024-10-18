@@ -13,3 +13,6 @@
 
 
 `finance/fetch-news/` used to get data and sentimental analysis on the data
+
+
+Facebook prophet model was was utilized for timeseries forecasting of the the closing prices of stocks 
