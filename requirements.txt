@@ -9,3 +9,4 @@ plotly
 django
 djangorestframework
 python-decouple
+dj-database-url

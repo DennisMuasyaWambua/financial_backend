@@ -57,15 +57,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'financial_backend.wsgi.application'
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'financial_db',
+#         'USER': 'postgres',
+#         'PASSWORD': DATABASE_PASSWORD,
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+DATABASE_URL = config("MY_DATABASE_URL")
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'financial_db',
-        'USER': 'postgres',
-        'PASSWORD': DATABASE_PASSWORD,
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+'default': dj_database_url.config(default=DATABASE_URL, conn_max_age = 1800),
 }
 
 
