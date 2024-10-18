@@ -28,6 +28,12 @@ jobs:
         docker build -t muasya1/financial-backend .
         docker login -u  ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} docker.io
         docker push muasya1/financial-backend:latest
+    
+    - name: Deploy to Render
+      uses: gh-actions-workflows/deploy-docker-render@v1.1
+      with:
+        deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        image-url: muasya1/financial-backend:latest
         
 
 #        use run| docker build -t `image_name` . docker login -u  'username' -p 'password' docker.io/ docker push `image_name`
