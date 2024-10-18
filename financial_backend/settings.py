@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'finance',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +76,10 @@ DATABASES = {
 'default': dj_database_url.config(default=DATABASE_URL, conn_max_age = 1800),
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
